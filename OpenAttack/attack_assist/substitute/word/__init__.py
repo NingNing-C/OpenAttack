@@ -12,11 +12,15 @@ from .english_counterfit import CounterFittedSubstitute
 from .english_word2vec import Word2VecSubstitute
 from .english_glove import GloveSubstitute
 
+from .protein_blosum62 import ProteinBlosum62Substitute
+
 
 def get_default_substitute(lang):
-    from ....tags import TAG_Chinese, TAG_English
+    from ....tags import TAG_Chinese, TAG_English, TAG_Protein
     if lang == TAG_English:
         return WordNetSubstitute()
     if lang == TAG_Chinese:
         return ChineseWordNetSubstitute()
+    if lang == TAG_Protein:
+        return ProteinBlosum62Substitute()
     return WordNetSubstitute()
