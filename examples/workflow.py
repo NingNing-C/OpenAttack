@@ -19,7 +19,7 @@ def main():
     dataset = datasets.load_dataset("sst", split="train[:20]").map(function=dataset_mapping)
     # We load the sst-2 dataset using `datasets` package, and map the fields.
 
-    attacker = OpenAttack.attackers.PWWSAttacker()
+    attacker = OpenAttack.attackers.FDAttacker()
     # After this step, we’ve initialized a PWWSAttacker and uses the default configuration during attack process.
 
     attack_eval = OpenAttack.AttackEval(attacker, victim)
