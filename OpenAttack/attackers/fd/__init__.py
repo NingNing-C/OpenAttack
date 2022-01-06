@@ -73,7 +73,7 @@ class FDAttacker(ClassificationAttacker):
         self.max_iter = max_iter
     
     def attack(self, victim: Classifier, x_orig, goal: ClassifierGoal):
-        x_orig = x_orig.lower()
+        #x_orig = x_orig.lower()
         
         sent = self.tokenizer.tokenize(x_orig, pos_tagging=False)
 

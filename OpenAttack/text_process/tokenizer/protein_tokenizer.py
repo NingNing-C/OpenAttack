@@ -1,7 +1,10 @@
 from .base import Tokenizer
 from ...data_manager import DataManager
 from ...tags import *
-from ...data import aas_pos
+#from ...data import aas_pos
+
+aas_pos={'L':("L","a"),'A':('A','a'),'G':('G','a'),'V':('V','a'),'S':('S','a'),'E':('E','a'),'R':('R','a'),'T':('T','a'),'I':('I','a'),'D':('D','a'),'P':('P','a'),'K':('K','a'),
+'Q':('Q','a'),'N':('N','a'),'F':('F','a'),'Y':('Y','a'),'M':('M','a'),'H':('H','a'),'W':('W','a'),'C':('C','a'),'X':('X','a'),'B':('B','a'),'Z':('Z','a')}
 
 def tokenize_pos(seq):
     ret=[]

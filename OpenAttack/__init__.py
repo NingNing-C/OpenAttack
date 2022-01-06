@@ -35,3 +35,6 @@ loadVictim = DataManager.loadVictim
 loadTProcess = DataManager.loadTProcess
 
 from .version import VERSION as __version__
+
+from .utils import language_by_name, HookCloser
+from .attack_assist.word_embedding import WordEmbedding

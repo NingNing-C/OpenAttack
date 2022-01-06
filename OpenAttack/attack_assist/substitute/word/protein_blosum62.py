@@ -18,9 +18,10 @@ class ProteinBlosum62Substitute(WordSubstitute):
         """
 
         self.k = k
-        self.protein_dict = json.load(open('dict_protein.json',"r"))
+        self.protein_dict = json.load(open('/Users/janie/Desktop/pre-training/attack/attack_protein/dict_protein.json',"r"))
 
     def substitute(self, word, pos_tag):
+        word=word.upper()
         if word not in self.protein_dict:
             raise WordNotInDictionaryException()
         sym_words = self.protein_dict[word]
